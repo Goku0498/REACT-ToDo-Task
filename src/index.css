@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #000;
+}
+
+.todo-input {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.todo-input input {
+  padding: 15px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.todo-input button {
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-input button:hover {
+  background-color: #218838;
+}
+
+.todos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.todo-card {
+  background-color: #d5f5e3;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.todo-card h3 {
+  color: #000;
+}
+
+.todo-card p {
+  margin: 5px 0;
+}
+
+.todo-card .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.todo-card .edit-btn {
+  background-color: #006400;
+  color: white;
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #006400;
+  font-weight: bold;
+}
+
+.todo-card .edit-btn:hover {
+  background-color: #004d00;
+}
+
+.todo-card .delete-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #dc3545;
+  font-weight: bold;
+}
+
+.todo-card .delete-btn:hover {
+  background-color: #c82333;
+}
+
+.todo-card select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.status-completed {
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.status-not-completed {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-section select {
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filter-section label {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .todos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todo-input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todo-input input,
+  .todo-input button {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .todo-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .todo-input input,
+  .todo-input button {
+    width: 100%;
+  }
+
+  .todo-card {
+    width: 100%;
+  }
+
+  .todo-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .todo-card p {
+    font-size: 0.9rem;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
